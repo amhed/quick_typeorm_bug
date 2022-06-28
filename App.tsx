@@ -9,8 +9,7 @@ const AppDataSource = new DataSource({
   type: 'react-native',
   database: 'sqlite-demo',
   location: 'default',
-  driver: require('react-native-sqlite-storage'),
-  // driver: require('react-native-quick-sqlite'),
+  driver: require('react-native-quick-sqlite'),
   entities: [Photo],
   synchronize: true,
   logging: true,
@@ -33,11 +32,11 @@ const App = () => {
         //   filename: 'whatever.png',
         // });
 
-        // this works
-        // const all = await repo.find();
-        // console.log(all);
+        // Valid query. Returns rows
+        const all = await repo.find();
+        console.log(all);
 
-        // this is an invalid query that should throw
+        // Invalid query that should throw
         // but instead returns an empty array
         const manualQuery = await repo.query(`
         SELECT * From UnexistingTable
