@@ -5,20 +5,15 @@ export class Photo {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column('string', {
-    length: 100,
-  })
+  @Column('text')
   name: string;
 
-  @Column('string')
+  @Column('text')
   description: string;
 
-  @Column('string')
+  @Column('text')
   filename: string;
 
   @Column('double')
   views: number;
-
-  @Column('bool')
-  isPublished: boolean;
 }
