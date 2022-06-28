@@ -1,12 +1,11 @@
+import 'reflect-metadata';
 import React from 'react';
 import {SafeAreaView, ScrollView, Text, View} from 'react-native';
 
 const App = () => {
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
+    <SafeAreaView>
+      <ScrollView contentInsetAdjustmentBehavior="automatic">
         <View>
           <Text>Testing TypeORM connection</Text>
         </View>
